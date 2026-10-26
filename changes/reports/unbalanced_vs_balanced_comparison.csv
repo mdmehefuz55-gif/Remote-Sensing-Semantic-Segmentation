@@ -1,0 +1,8 @@
+Class Name,Pixel Frequency,Loss Multiplier,Unbalanced U-Net IoU (%),Balanced+TTA U-Net IoU (%),U-Net Delta (%),Unbalanced DeepLab IoU (%),Balanced+TTA DeepLab IoU (%),DeepLab Delta (%)
+Background,34.72%,0.265,52.3,50.42,-1.88,49.82,48.21,-1.61
+Building,9.20%,1.0,59.24,55.23,-4.01,52.0,50.03,-1.97
+Road,4.86%,1.893,51.84,52.6,0.76,48.87,51.99,3.12
+Water,8.24%,1.1165,52.03,54.46,2.43,54.6,53.14,-1.46
+Barren,4.71%,1.9568,27.06,36.1,9.04,19.54,33.08,13.54
+Forest,12.17%,0.7559,40.43,40.21,-0.22,38.4,40.38,1.98
+Agriculture,22.78%,0.4039,48.34,48.11,-0.23,44.6,46.92,2.32

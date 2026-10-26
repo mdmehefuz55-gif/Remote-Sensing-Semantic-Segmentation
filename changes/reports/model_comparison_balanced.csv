@@ -1,0 +1,5 @@
+Model,Parameters (M),Mean IoU (mIoU %),Overall Accuracy (OA %),Macro Precision (%),Macro Recall (%),Macro F1-Score (%),Throughput (FPS),Best Epoch,Evaluation Split,Test Split Used
+U-Net (Balanced + 4-View TTA),4.32,48.16,65.91,65.69,65.9,64.72,37.93,44,"Validation (1,669 pairs)",NO — excluded by design
+DeepLabV3+ (Balanced + 4-View TTA),26.71,46.25,64.51,62.15,66.08,62.95,74.18,86,"Validation (1,669 pairs)",NO — excluded by design
+U-Net (Balanced),4.32,47.21,65.21,64.69,65.14,63.84,141.48,44,"Validation (1,669 pairs)",NO — excluded by design
+DeepLabV3+ (Balanced),26.71,45.38,63.8,61.31,65.46,62.14,231.55,86,"Validation (1,669 pairs)",NO — excluded by design
