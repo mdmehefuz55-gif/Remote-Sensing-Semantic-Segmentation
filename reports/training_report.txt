@@ -1,0 +1,30 @@
+======================================================================
+PHASE 6 — FULL MODEL TRAINING REPORT
+======================================================================
+Date: 2026-09-30 08:30:19
+Device: cuda
+Max Epochs: 150 | Early Stopping Patience: 15
+Batch Size: 8 | Learning Rate: 0.0001
+
+Model: UNET
+  - Total Epochs Completed: 150
+  - Best Epoch:             82
+  - Peak Validation mIoU:   47.32%
+  - Peak Validation OA:     66.61%
+  - Final Train Loss:       0.7073
+  - Final Val Loss:         2.1112
+  - Best Checkpoint:        checkpoints\unet_best.pth
+
+Model: DEEPLABV3P
+  - Total Epochs Completed: 150
+  - Best Epoch:             66
+  - Peak Validation mIoU:   43.98%
+  - Peak Validation OA:     64.19%
+  - Final Train Loss:       0.6562
+  - Final Val Loss:         2.3187
+  - Best Checkpoint:        checkpoints\deeplabv3p_best.pth
+
+======================================================================
+TRAINING PIPELINE COMPLETE
+Next Phase: Phase 7 — Comprehensive Model Evaluation & Quantitative Comparison
+======================================================================

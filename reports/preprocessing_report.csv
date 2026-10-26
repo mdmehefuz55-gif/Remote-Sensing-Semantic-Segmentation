@@ -1,0 +1,9 @@
+Check_ID,Description,Expected,Observed,Status
+Check 1,Image shape and dtype,"[3, 512, 512], float32","[3, 512, 512], torch.float32",PASSED
+Check 2,Mask shape and dtype,"[512, 512], int64","[512, 512], torch.int64",PASSED
+Check 3,Image normalization range,"Zero-centered, std ~ 1.0","min=-1.71, max=2.64",PASSED
+Check 4,Mask label integrity,Subset of [0..7],"[1, 2, 3, 4, 7]",PASSED
+Check 5,Image-mask spatial alignment,Pixel-level correspondence,Visual alignment verified,PASSED
+Check 6,Identical spatial augmentation,Synchronous transform on image & mask,Augmentation alignment verified,PASSED
+Check 7,No-data / Ignore class handling,Ignore index = 0 preserved,Class 0 identified & preserved,PASSED
+Check 8,Multi-sample consistency,All samples pass checks,4 random samples passed,PASSED

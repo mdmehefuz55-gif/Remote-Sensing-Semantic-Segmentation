@@ -1,0 +1,3 @@
+Model,Parameters (M),Mean IoU (mIoU %),Overall Accuracy (OA %),Macro Precision (%),Macro Recall (%),Macro F1-Score (%),Throughput (FPS),Latency (ms/sample),Best Checkpoint Epoch
+U-Net,4.32,47.32,66.61,69.42,61.14,63.6,151.51,6.6,82
+DeepLabV3+,26.71,43.98,64.19,66.85,57.96,60.15,230.44,4.34,66

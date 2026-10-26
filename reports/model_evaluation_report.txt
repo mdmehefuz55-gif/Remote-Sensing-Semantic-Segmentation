@@ -1,0 +1,49 @@
+================================================================================
+PHASE 7 — COMPREHENSIVE MODEL EVALUATION & QUANTITATIVE COMPARISON REPORT
+================================================================================
+Execution Date:       2026-10-01 14:00:48
+Device:               cuda
+GPU Name:             NVIDIA GeForce RTX 5060 Ti
+Validation Partition: 1,669 pairs (512x512)
+Evaluated Classes:    7 semantic categories (Classes 1-7, excluding ignore_index=0)
+
+1. OVERALL QUANTITATIVE PERFORMANCE
+--------------------------------------------------------------------------------
+     Model  Parameters (M)  Mean IoU (mIoU %)  Overall Accuracy (OA %)  Macro Precision (%)  Macro Recall (%)  Macro F1-Score (%)  Throughput (FPS)  Latency (ms/sample)  Best Checkpoint Epoch
+     U-Net            4.32              47.32                    66.61                69.42             61.14               63.60            151.51                 6.60                     82
+DeepLabV3+           26.71              43.98                    64.19                66.85             57.96               60.15            230.44                 4.34                     66
+
+2. PER-CLASS METRIC BREAKDOWN
+--------------------------------------------------------------------------------
+ Class ID  Class Name  Pixel Support  U-Net IoU (%)  DeepLabV3+ IoU (%)  IoU Delta (%)  U-Net F1 (%)  DeepLabV3+ F1 (%)  U-Net Precision (%)  DeepLabV3+ Precision (%)  U-Net Recall (%)  DeepLabV3+ Recall (%)
+        1  Background      153814205          52.30               49.82           2.48         68.68              66.50                58.61                     56.27             82.94                  81.28
+        2    Building       30702570          59.24               52.00           7.24         74.40              68.42                69.46                     65.48             80.11                  71.65
+        3        Road       19897812          51.84               48.87           2.97         68.28              65.65                75.58                     71.82             62.27                  60.46
+        4       Water       49890474          52.03               54.60          -2.57         68.45              70.63                77.45                     73.36             61.32                  68.11
+        5      Barren       18597120          27.06               19.54           7.52         42.59              32.69                61.40                     59.34             32.61                  22.56
+        6      Forest       31405079          40.43               38.40           2.03         57.58              55.49                60.28                     58.72             55.11                  52.60
+        7 Agriculture      121771163          48.34               44.60           3.74         65.18              61.68                83.14                     82.98             53.60                  49.09
+
+3. ERROR ANALYSIS & ARCHITECTURAL INSIGHTS
+--------------------------------------------------------------------------------
+  - Peak mIoU: U-Net (47.32%) vs DeepLabV3+ (43.98%)
+  - Peak OA:   U-Net (66.61%) vs DeepLabV3+ (64.19%)
+  - Parameter Efficiency: U-Net has 4.32M params vs DeepLabV3+ 26.71M params.
+  - Inference Speed: U-Net achieves 151.5 FPS vs DeepLabV3+ 230.4 FPS.
+
+4. GENERATED ARTIFACTS
+--------------------------------------------------------------------------------
+  - U-Net Confusion Matrix:       outputs/evaluation/confusion_matrix_unet.png
+  - DeepLabV3+ Confusion Matrix:  outputs/evaluation/confusion_matrix_deeplabv3p.png
+  - Per-Class IoU Bar Chart:      outputs/evaluation/per_class_iou_comparison.png
+  - Per-Class F1 Bar Chart:       outputs/evaluation/per_class_f1_comparison.png
+  - Qualitative Comparison:       outputs/evaluation/qualitative_evaluation_comparison.png
+  - U-Net Error Maps:             outputs/evaluation/error_analysis_unet.png
+  - DeepLabV3+ Error Maps:        outputs/evaluation/error_analysis_deeplabv3p.png
+  - Test Set Predictions:         outputs/predictions/
+  - Summary Metrics CSV:          reports/model_comparison_metrics.csv
+  - Per-Class Metrics CSV:        reports/per_class_metrics_comparison.csv
+
+================================================================================
+PHASE 7 EVALUATION COMPLETE — ALL PLANNED TASKS VERIFIED SUCCESSFULLY
+================================================================================

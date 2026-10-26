@@ -1,0 +1,53 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Datasets (exceeds GitHub storage limits)
+data/
+processed_data/
+*.zip
+*.tar
+*.tar.gz
+*.7z
+
+# Model weights and checkpoints (exceeds GitHub 100MB file limit)
+*.pth
+*.pt
+*.pwf
+*.h5
+*.hdf5
+*.ckpt
+*.onnx
+*.weights
+# Keep metric / history logs in checkpoints
+!checkpoints/*.csv
+!changes/checkpoints/*.csv
+
+# Video files (large test video data)
+*.mp4
+*.avi
+*.mov
+*.mkv
+test viedos/
+
+# Operating system / IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Scratch & logs
+scratch/
+*.log
+changes/prediction/outputs/sample_viedo*

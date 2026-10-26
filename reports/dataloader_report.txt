@@ -1,0 +1,63 @@
+======================================================================
+PHASE 4 — DATASET & DATALOADER VERIFICATION REPORT
+======================================================================
+Execution Date: 2026-09-26 15:21:53
+Dataset: LoveDA
+Dataset Root: C:\Users\CUTM\Desktop\Remote-Sensing-Semantic-Segmentation\LoveDA
+
+1. DATASET PARTITION SIZES
+----------------------------------------------------------------------
+  - Training samples:         2522 (Matched pairs)
+  - Validation samples:       1669 (Matched pairs)
+  - Test samples:             1796 (Unlabelled images)
+  - Total Supervised Pairs:   4191
+  - Status:                   PASSED
+
+2. SINGLE SAMPLE SPECIFICATIONS (Test 2)
+----------------------------------------------------------------------
+  - Image Tensor Shape:       [3, 512, 512]
+  - Image Dtype:              torch.float32
+  - Mask Tensor Shape:        [512, 512]
+  - Mask Dtype:               torch.int64
+  - Unique Mask Values:       [1, 2, 3, 4, 7]
+  - Status:                   PASSED
+
+3. BATCH SPECIFICATIONS (Test 3)
+----------------------------------------------------------------------
+  - Batch Size:               4
+  - Batch Image Tensor:       [4, 3, 512, 512] (torch.float32)
+  - Batch Mask Tensor:        [4, 512, 512] (torch.int64)
+  - Status:                   PASSED
+
+4. BATCH MASK VALUE INTEGRITY (Test 4)
+----------------------------------------------------------------------
+  - Unique IDs in Batch:      [1, 2, 3, 4, 5, 6, 7]
+  - Allowed Class IDs:        [0, 1, 2, 3, 4, 5, 6, 7]
+  - Unexpected IDs:           []
+  - Status:                   PASSED
+
+5. BATCH VISUALIZATION (Test 5)
+----------------------------------------------------------------------
+  - Visual Output Path:       outputs/dataloader/batch_visualizations/train_batch_samples.png
+  - Status:                   PASSED
+
+6. VALIDATION LOADER (Test 6)
+----------------------------------------------------------------------
+  - Val Batch Image Tensor:   [4, 3, 512, 512]
+  - Val Batch Mask Tensor:    [4, 512, 512]
+  - Visual Output Path:       outputs/dataloader/batch_visualizations/val_batch_samples.png
+  - Status:                   PASSED
+
+7. SYSTEM & HARDWARE STATUS
+----------------------------------------------------------------------
+  - Device:                   CUDA
+  - GPU Name:                 NVIDIA GeForce RTX 5060 Ti
+  - CUDA Available:           True
+  - DataLoader Workers:       0
+  - Avg Batch Latency:        0.125 s
+  - Loading Throughput:       32.0 samples/s
+
+======================================================================
+FINAL RESULT: DATALOADER PIPELINE VERIFIED SUCCESSFULLY
+Next Phase: Phase 5 — Semantic Segmentation Model Development (U-Net & DeepLabV3+)
+======================================================================
